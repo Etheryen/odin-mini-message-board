@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  h2 Messages:
+  ul 
+    each message in messages
+      li
+        big
+          b= message.text
+        br
+        i= 'by ' + message.user
+        br
+        small= 'added ' + message.added.toLocaleString()
